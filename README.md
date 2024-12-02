@@ -1,8 +1,28 @@
 # Candidate Search Application
 
+## Table of Contents
+- [Overview](#overview)
+- [Demo](#demo)
+- [User Story](#user-story)
+- [Features](#features)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Prerequisites](#prerequisites)
+- [Setup and Installation](#setup-and-installation)
+- [Technologies Used](#technologies-used)
+- [Configuration](#configuration)
+- [Deployment](#deployment)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
 ## Overview
 
 Candidate Search is a web application designed to help employers find and track potential job candidates by browsing through GitHub user profiles.
+
+## Demo
+
+The code is deployed on Render for direct visit. [Link](https://candidate-search-2-hxwi.onrender.com/)
 
 ## User Story
 
