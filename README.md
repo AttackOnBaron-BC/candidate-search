@@ -1,33 +1,111 @@
-# React + TypeScript + Vite
+# Candidate Search Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Candidate Search is a web application designed to help employers find and track potential job candidates by browsing through GitHub user profiles.
 
-* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
-* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
+## User Story
 
-## Expanding the ESLint configuration
-
-If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-* Configure the top-level `parserOptions` property as follows:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+AS AN employer
+I WANT a candidate search application
+SO THAT I can hire the best candidates
 ```
 
-* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
-* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
-* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
+## Features
 
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+- Browse potential candidates from GitHub
+- Save promising candidates to a list
+- Persistent storage of selected candidates
+- Responsive and intuitive user interface
+
+## Acceptance Criteria
+
+1. Initial candidate display
+   - On page load, display detailed information for one candidate
+   - Include name, username, location, avatar, email, GitHub profile URL, and company
+
+2. Candidate Management
+   - "+" button: Save current candidate to potential candidates list
+   - "-" button: Skip current candidate without saving
+   - Handling of candidate list exhaustion
+
+3. Potential Candidates Page
+   - View list of previously saved candidates
+   - Persistent storage across page reloads
+   - Handling of empty candidate list
+  
+  ![image](https://github.com/user-attachments/assets/3750e3be-3a28-4852-9303-45ad04ff5ce6)
+  ![image](https://github.com/user-attachments/assets/b362193d-2852-475d-8017-9e41093e2eec)
+
+
+## Prerequisites
+
+- Node.js (v14 or later)
+- npm (v6 or later)
+- GitHub Personal Access Token
+
+## Setup and Installation
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/your-username/candidate-search.git
+   cd candidate-search
+   ```
+
+2. Install dependencies
+   ```bash
+   npm install
+   npm build
+   ```
+
+3. Create a `.env` file in the root directory
+   ```
+   GITHUB_TOKEN=your_personal_access_token
+   ```
+
+4. Start the development server
+   ```bash
+   npm run dev
+   ```
+
+## Technologies Used
+
+- TypeScript
+- React
+- GitHub REST API
+- Local Storage
+- Render (for deployment)
+
+## Configuration
+
+### GitHub Personal Access Token
+
+1. Visit [GitHub Personal Access Token]([https://github.com/settings/tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token))
+2. Generate a new fine grained token with all default setting
+3. Add the token to your `.env` file
+
+## Deployment
+
+The application is deployed on Render. Ensure all environment variables are configured in the Render dashboard.
+
+## API Endpoints
+
+- GitHub Users API: Retrieve candidate information
+- Local Backend: Manage candidate selection and storage
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Project Link: [https://github.com/your-username/candidate-search](https://github.com/your-username/candidate-search)
